@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31471dfd53d5490a956a89a1b2d11ad9, type: 3}
   m_Name: Platform
   m_EditorClassIdentifier: 
-  _colliderType: 0
-  _customPhysicsSprite: {fileID: 2755152769739111748, guid: 7864e5717029c1c4d949ff099ca9316f, type: 3}
+  _colliderType: 1
+  _customPhysicsSprite: {fileID: 0}
   _tilemapTag: Untagged
   _tilemapLayerMask: 6
   _physicsMaterial: {fileID: 0}

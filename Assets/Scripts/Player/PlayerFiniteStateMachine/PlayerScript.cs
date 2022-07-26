@@ -312,7 +312,7 @@ public class PlayerScript : MonoBehaviour
         //---Wallcheck.
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * FacingDirection * playerData.wallCheckDistance));
         //---Ceiling check.
-        Gizmos.DrawWireSphere(ceilingCheck.position, playerData.groundCheckRadius);
+     //   Gizmos.DrawWireSphere(ceilingCheck.position, playerData.groundCheckRadius);
 
         //---LedgeHeight box.
 //        Debug.DrawRay(groundCheck.position + new Vector3(playerData.ledgeHeightBoxSize.x, 0), Vector2.down * (playerData.ledgeHeightBoxSize.y + 1f - 0.5f), Color.blue);

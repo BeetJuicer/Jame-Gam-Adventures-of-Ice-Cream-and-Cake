@@ -40,8 +40,8 @@ MonoBehaviour:
   crouchMovementVelocity: 5
   crouchColliderHeight: 1
   standColliderHeight: 1.6
-  groundCheckRadius: 0.04
-  groundCheckBoxSize: {x: 0.33, y: 0.1}
+  groundCheckRadius: 0.07
+  groundCheckBoxSize: {x: 0.43, y: 0.1}
   ledgeHeightBoxSize: {x: 0.67, y: 1}
   wallHeightBoxSize: {x: 0.09, y: 1}
   wallCheckDistance: 0.29
