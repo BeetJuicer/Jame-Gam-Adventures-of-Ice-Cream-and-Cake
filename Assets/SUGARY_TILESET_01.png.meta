@@ -539,13 +539,13 @@ TextureImporter:
       name: SUGARY_TILESET_01_20
       rect:
         serializedVersion: 2
-        x: 128
+        x: 145
         y: 176
-        width: 32
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 13
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5000012, y: 0.997058}
+      border: {x: 1, y: 3, z: 1, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -787,6 +787,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SUGARY_TILESET_01_18
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 296
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22e8087d0f20bc479f7b50c369258b1
+      internalID: -1484447634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -828,6 +849,7 @@ TextureImporter:
       SUGARY_TILESET_01_1: 1988072075
       SUGARY_TILESET_01_6: -238874634
       SUGARY_TILESET_01_20: -497559855
+      SUGARY_TILESET_01_18: -1484447634
       SUGARY_TILESET_01_9: -512973654
       SUGARY_TILESET_01_22: -69396548
   spritePackingTag: 
