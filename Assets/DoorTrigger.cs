@@ -10,27 +10,37 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField]
     private DoorBody doorBody;
 
+    [SerializeField]
+    private bool cakeTrigger;
+
     private Vector3 startPosition;
+
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         door = gameObject.transform.parent.GetComponent<Door>();
         startPosition = transform.position;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log("Door Open: " + door.isDoorOpen);
+        animator.SetBool("cake", cakeTrigger);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.GetComponent<PlayerHandler>().cake)
+            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake)
             {
-                Debug.Log("Opening door.");
+                transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
+                doorBody.OpenDoor();
+            }
+            if (!cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
+            {
                 transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
                 doorBody.OpenDoor();
             }
@@ -41,11 +51,15 @@ public class DoorTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.GetComponent<PlayerHandler>().cake)
+            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake)
             {
-                Debug.Log("Closing door.");
                 transform.DOMoveY(startPosition.y, 0.2f).SetEase(Ease.InOutSine);
                 doorBody.CloseDoor();
+            }
+            if (!cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
+            {
+                transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
+                doorBody.OpenDoor();
             }
         }
     }
