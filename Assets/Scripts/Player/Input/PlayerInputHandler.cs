@@ -39,10 +39,11 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Awake()
     {
+        /*
         if (instance != null)
         {
             Debug.LogError("Found more than one Input Manager in the scene.");
-        }
+        }*/
         instance = this;
     }
 

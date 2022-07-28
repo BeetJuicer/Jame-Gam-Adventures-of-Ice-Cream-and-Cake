@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private float respawnTimeStart;
 
     private bool respawn;
+    public static bool isCake = false;
 
     private void Start()
     {

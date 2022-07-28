@@ -115,6 +115,29 @@ public class PlayerScript : MonoBehaviour
     {
         UpdateLog();
 
+        if (PlayerInputHandler.GetInstance().GetInteractPressed())
+        {
+            Debug.Log("Switch cakes.");
+            GameManager.isCake = !GameManager.isCake;
+        }
+
+        if (gameObject.GetComponent<PlayerHandler>().cake == false)
+        {
+            if (GameManager.isCake == true)
+            {
+                StateMachine.ChangeState(IdleState);
+                return;
+            }
+        }
+        else
+        {
+            if (GameManager.isCake == false)
+            {
+                StateMachine.ChangeState(IdleState);
+                return;
+            }
+        }
+
         if (PauseMenu.gamePaused)
         {
             return;

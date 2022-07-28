@@ -17,6 +17,7 @@ public class PlayerHandler : MonoBehaviour, IDataPersistence
     private bool isGameOverMenuActive;
     private bool doneDying;
     //public bool isTimeActive;
+    public bool cake;
     public bool isDead;
 
     private GameManager GM;
@@ -83,6 +84,12 @@ public class PlayerHandler : MonoBehaviour, IDataPersistence
 
     void Update()
     {
+
+        if ((cake == true) && (GameManager.isCake == false))
+        {
+            return;
+        }
+
         // Don't do anything if game is paused.
         if (DialogueManager.GetInstance().dialogueIsPlaying || 
             CutsceneTracker.GetInstance().cutsceneIsPlaying ||
