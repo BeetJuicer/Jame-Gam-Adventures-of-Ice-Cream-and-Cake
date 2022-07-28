@@ -68,7 +68,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -791,10 +791,10 @@ TextureImporter:
       name: SUGARY_TILESET_01_18
       rect:
         serializedVersion: 2
-        x: 176
+        x: 175
         y: 296
-        width: 16
-        height: 7
+        width: 18
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -812,12 +812,12 @@ TextureImporter:
       name: SUGARY_TILESET_01_32
       rect:
         serializedVersion: 2
-        x: 208
+        x: 207
         y: 296
-        width: 16
-        height: 7
+        width: 18
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -841,7 +841,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       SUGARY_TILESET_01_16: 1612174594
-      SUGARY_TILESET_01_32: -1535795831
+      SUGARY_TILESET_01_22: -69396548
       SUGARY_TILESET_01_11: -1840456139
       SUGARY_TILESET_01_21: -1004352559
       SUGARY_TILESET_01_27: -930275939
@@ -873,7 +873,7 @@ TextureImporter:
       SUGARY_TILESET_01_20: -497559855
       SUGARY_TILESET_01_18: -1484447634
       SUGARY_TILESET_01_9: -512973654
-      SUGARY_TILESET_01_22: -69396548
+      SUGARY_TILESET_01_32: -1535795831
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

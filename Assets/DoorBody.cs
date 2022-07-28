@@ -46,6 +46,6 @@ public class DoorBody : MonoBehaviour
     }
     public void CloseDoor()
     {
-        transform.DOMoveY(origPos.y, 1.5f).SetEase(Ease.InOutSine);
+        transform.DOMoveY(origPos.y, 0.5f).SetEase(Ease.InOutSine);
     }
 }
