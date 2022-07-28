@@ -63,7 +63,7 @@ public class PlayerHandler : MonoBehaviour, IDataPersistence
         isGameOverMenuActive = false;
         isDead = false;
         anim.SetBool("dead", false);
-        scoreText.SetActive(true);
+        scoreText.SetActive(false);
         //--Set damageable 0.75 seconds after starting.
         Invoke("ActivateTime", 0.75f);
 

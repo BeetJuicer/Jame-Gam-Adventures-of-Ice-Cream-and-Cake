@@ -1,31 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
-[ExecuteInEditMode]
 public class DoorBody : MonoBehaviour
 {
+    //----Components
+
+    //-----------Scripts
     private Door door;
-    private SpriteRenderer spriteRenderer;
-    private BoxCollider2D boxCollider;
+    private DoorBodyEditor doorBodyEditor;
+    //-----------Bools
+
+    //-----------Vectors
+    private Vector2 topPosition;
+    private Vector2 bottomPosition;
+    private Vector2 origPos;
+
     // Start is called before the first frame update
     void Start()
     {
         door = gameObject.transform.parent.GetComponent<Door>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        doorBodyEditor = gameObject.GetComponent<DoorBodyEditor>();
+
+        origPos = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (door.isDoorOpen)
-        {
-            Debug.Log("Door is Open!");
-        }
+        Debug.Log("Top Position: " + topPosition + " Bottom Position: " + bottomPosition);
+    }
 
-        boxCollider.size = spriteRenderer.size;
-        float colliderOffsetY = -boxCollider.size.y / 2;
-        boxCollider.offset = new Vector2(0f, colliderOffsetY);
+    public void OpenDoor()
+    {
+        transform.DOMoveY(origPos.y + doorBodyEditor.doorHeight, 1.5f).SetEase(Ease.InOutSine);
+    }
+    public void CloseDoor()
+    {
+        transform.DOMoveY(origPos.y, 1.5f).SetEase(Ease.InOutSine);
     }
 }

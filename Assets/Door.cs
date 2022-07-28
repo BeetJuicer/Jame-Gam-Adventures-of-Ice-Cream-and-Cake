@@ -2,18 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Door : MonoBehaviour
 {
-    public bool isDoorOpen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //[HideInInspector]
+    //public bool isDoorOpen;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
