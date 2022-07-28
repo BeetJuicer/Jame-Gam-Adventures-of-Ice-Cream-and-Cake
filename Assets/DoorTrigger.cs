@@ -5,8 +5,6 @@ using DG.Tweening;
 
 public class DoorTrigger : MonoBehaviour
 {
-    private Door door;
-
     [SerializeField]
     private DoorBody doorBody;
 
@@ -19,7 +17,6 @@ public class DoorTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        door = gameObject.transform.parent.GetComponent<Door>();
         startPosition = transform.position;
         animator = GetComponent<Animator>();
     }
@@ -28,21 +25,17 @@ public class DoorTrigger : MonoBehaviour
     void Update()
     {
         animator.SetBool("cake", cakeTrigger);
+        Debug.Log("Active buttons: " + doorBody.activeButtons);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake)
+            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake ||
+                !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
             {
-                transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
-                doorBody.OpenDoor();
-            }
-            if (!cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
-            {
-                transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
-                doorBody.OpenDoor();
+                StepOn();
             }
         }
     }
@@ -51,16 +44,31 @@ public class DoorTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake)
+            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake || 
+                !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
             {
-                transform.DOMoveY(startPosition.y, 0.2f).SetEase(Ease.InOutSine);
-                doorBody.CloseDoor();
+                StepOff();
             }
-            if (!cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
-            {
-                transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
-                doorBody.OpenDoor();
-            }
+        }
+    }
+
+    void StepOn()
+    {
+        doorBody.activeButtons++;
+        transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
+        if (doorBody.activeButtons > 0)
+        {
+            doorBody.OpenDoor();
+        }
+    }
+
+    void StepOff()
+    {
+        doorBody.activeButtons--;
+        transform.DOMoveY(startPosition.y, 0.2f).SetEase(Ease.InOutSine);
+        if (doorBody.activeButtons == 0)
+        {
+            doorBody.CloseDoor();
         }
     }
 }

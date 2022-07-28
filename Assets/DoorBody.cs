@@ -11,11 +11,13 @@ public class DoorBody : MonoBehaviour
     private Door door;
     private DoorBodyEditor doorBodyEditor;
     //-----------Bools
-
+    public bool doorBodyOpened;
     //-----------Vectors
     private Vector2 topPosition;
     private Vector2 bottomPosition;
     private Vector2 origPos;
+    //-----------Values
+    public int activeButtons;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,14 @@ public class DoorBody : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Top Position: " + topPosition + " Bottom Position: " + bottomPosition);
+        if (transform.position.y == origPos.y + doorBodyEditor.doorHeight)
+        {
+            doorBodyOpened = true;
+        }
+        else
+        {
+            doorBodyOpened = false;
+        }
     }
 
     public void OpenDoor()
