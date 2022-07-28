@@ -117,14 +117,15 @@ public class PlayerScript : MonoBehaviour
 
         if (PlayerInputHandler.GetInstance().GetInteractPressed())
         {
-            Debug.Log("Switch cakes.");
-            GameManager.isCake = !GameManager.isCake;
+                GameManager.isCake = !GameManager.isCake;
+
         }
 
         if (gameObject.GetComponent<PlayerHandler>().cake == false)
         {
             if (GameManager.isCake == true)
             {
+                CurrentVelocity = RB.velocity;
                 StateMachine.ChangeState(IdleState);
                 return;
             }
@@ -133,6 +134,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (GameManager.isCake == false)
             {
+                CurrentVelocity = RB.velocity;
                 StateMachine.ChangeState(IdleState);
                 return;
             }
@@ -152,6 +154,10 @@ public class PlayerScript : MonoBehaviour
         StateMachine.CurrentState.LogicUpdate();
     }
 
+    IEnumerator Wait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+    }
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
