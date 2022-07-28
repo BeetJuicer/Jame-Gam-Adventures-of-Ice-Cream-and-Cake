@@ -11,13 +11,15 @@ public class DoorBody : MonoBehaviour
     private Door door;
     private DoorBodyEditor doorBodyEditor;
     //-----------Bools
-    public bool doorBodyOpened;
+    public bool verticalDoor;
+    public bool isGoingRight;
     //-----------Vectors
-    private Vector2 topPosition;
-    private Vector2 bottomPosition;
     private Vector2 origPos;
     //-----------Values
+    [HideInInspector]
     public int activeButtons;
+
+    private int direction;
 
     // Start is called before the first frame update
     void Start()
@@ -25,27 +27,38 @@ public class DoorBody : MonoBehaviour
         door = gameObject.transform.parent.GetComponent<Door>();
         doorBodyEditor = gameObject.GetComponent<DoorBodyEditor>();
 
+        if(isGoingRight)
+        direction = 1;
+        else direction = -1;
+
         origPos = transform.position;
     }
 
     private void Update()
     {
-        if (transform.position.y == origPos.y + doorBodyEditor.doorHeight)
-        {
-            doorBodyOpened = true;
-        }
-        else
-        {
-            doorBodyOpened = false;
-        }
+
     }
 
     public void OpenDoor()
     {
-        transform.DOMoveY(origPos.y + doorBodyEditor.doorHeight, 1.5f).SetEase(Ease.InOutSine);
+        if (verticalDoor)
+        {
+            transform.DOMoveY(origPos.y - doorBodyEditor.doorHeight * transform.rotation.y, 1.5f).SetEase(Ease.InOutSine);
+        }
+        else
+        {
+            transform.DOMoveX(origPos.x + doorBodyEditor.doorHeight * direction, 0.5f).SetEase(Ease.InOutSine);
+        } 
     }
     public void CloseDoor()
     {
-        transform.DOMoveY(origPos.y, 0.5f).SetEase(Ease.InOutSine);
+        if (verticalDoor)
+        {
+            transform.DOMoveY(origPos.y, 0.5f).SetEase(Ease.InOutSine);
+        }
+        else
+        {
+            transform.DOMoveX(origPos.x, 0.5f).SetEase(Ease.InOutSine);
+        }
     }
 }
