@@ -7,6 +7,14 @@ public class CheckpointCounter : MonoBehaviour
     bool cakePassed;
     bool iceCreamPassed;
 
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        animator.Play("Checkpoint-0");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +23,7 @@ public class CheckpointCounter : MonoBehaviour
             GameManager.GetInstance().checkPointCount++;
             cakePassed = false;
             iceCreamPassed = false;
+            animator.Play("Checkpoint-2");
         }
     }
 
@@ -25,10 +34,12 @@ public class CheckpointCounter : MonoBehaviour
             if (collision.GetComponent<PlayerHandler>().cake && !cakePassed)
             {
                 cakePassed = true;
+                animator.Play("Checkpoint-1-cake");
             }
             if (!collision.GetComponent<PlayerHandler>().cake && !iceCreamPassed)
             {
                 iceCreamPassed = true;
+                animator.Play("Checkpoint-1-iceCream");
             }
         }
     }
