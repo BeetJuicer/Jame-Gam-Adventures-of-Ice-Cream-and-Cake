@@ -12,5 +12,6 @@ What a shame. I could've seen you two fuse.
 ->END
 
 === done ===
+#speaker:Big Guy #portrait:big_guy_neutral
 Hm? You're still here? 
 ->END
