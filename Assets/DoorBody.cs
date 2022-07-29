@@ -41,6 +41,7 @@ public class DoorBody : MonoBehaviour
 
     public void OpenDoor()
     {
+        AudioManager.instance.Play("Faller Impact");
         if (verticalDoor)
         {
             transform.DOMoveY(origPos.y + doorBodyEditor.doorHeight * direction, 0.5f).SetEase(Ease.InOutSine);
@@ -52,6 +53,7 @@ public class DoorBody : MonoBehaviour
     }
     public void CloseDoor()
     {
+        AudioManager.instance.Play("Faller Split");
         if (verticalDoor)
         {
             transform.DOMoveY(origPos.y, 0.5f).SetEase(Ease.InOutSine);

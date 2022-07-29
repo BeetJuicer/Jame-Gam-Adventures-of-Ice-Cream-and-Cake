@@ -82,6 +82,7 @@ public class DoorTrigger : MonoBehaviour
 
     void StepOn()
     {
+        AudioManager.instance.Play("Click");
         doorBody.activeButtons++;
         transform.DOMoveY(startPosition.y - 0.25f, 0.2f).SetEase(Ease.InOutSine);
         if (doorBody.activeButtons > 0)

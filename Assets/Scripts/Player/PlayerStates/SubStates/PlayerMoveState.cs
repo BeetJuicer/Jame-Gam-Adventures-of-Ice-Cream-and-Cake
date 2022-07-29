@@ -18,7 +18,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Enter();
 
-        player.InvokeRepeating("PlayMoveAudio", 0f, 0.5f);
+        player.InvokeRepeating("PlayMoveAudio", 0f, 0.2f);
         startTime = Time.time;
     }
 
