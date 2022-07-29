@@ -62,6 +62,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private Transform wallHeightCheck;
 
+    private LayerMask candyLayer;
+
     #endregion
 
     #region Other Variables
@@ -104,6 +106,8 @@ public class PlayerScript : MonoBehaviour
 
         AudioManager = GameObject.FindWithTag("AudioManager").gameObject.GetComponent<AudioManager>();
         playerHandler = GameObject.FindWithTag("Player").gameObject.GetComponent<PlayerHandler>();
+
+        candyLayer = (playerHandler.cake) ? playerData.whatIsCakeGround : playerData.whatIsIceCreamGround;
 
         FacingDirection = 1;
         playerGravity = RB.gravityScale;
@@ -220,7 +224,8 @@ public class PlayerScript : MonoBehaviour
     public bool CheckIfGrounded()
     {
         //return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
-        return BoxCastDrawer.BoxCastAndDraw(groundCheck.position, playerData.groundCheckBoxSize, 0f, Vector2.down, .02f, playerData.whatIsGround);
+        return BoxCastDrawer.BoxCastAndDraw(groundCheck.position, playerData.groundCheckBoxSize, 0f, Vector2.down, .02f, playerData.whatIsGround) ||
+               BoxCastDrawer.BoxCastAndDraw(groundCheck.position, playerData.groundCheckBoxSize, 0f, Vector2.down, .02f, candyLayer);
         
     }
 

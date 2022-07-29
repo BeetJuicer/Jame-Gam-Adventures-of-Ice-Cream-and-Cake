@@ -58,6 +58,8 @@ public class PlayerData : ScriptableObject
     public Vector2 wallHeightBoxSize= new Vector2(.7f, 1f);
     public float wallCheckDistance = 0.5f;
     public LayerMask whatIsGround;
+    public LayerMask whatIsCakeGround;
+    public LayerMask whatIsIceCreamGround;
 
     [Header("Carl Stats")]
     public float maxStamina = 100f;

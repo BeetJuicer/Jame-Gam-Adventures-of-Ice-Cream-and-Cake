@@ -16,10 +16,10 @@ TagManager:
   - UI
   - Ground
   - Bounds
-  - 
-  - 
-  - 
-  - 
+  - CakeGround
+  - IceCreamGround
+  - IceCreamPlayer
+  - CakePlayer
   - 
   - 
   - 
