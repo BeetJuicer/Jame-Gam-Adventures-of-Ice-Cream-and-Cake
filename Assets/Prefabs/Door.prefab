@@ -172,7 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f0651dc3962e34a951b1b2cd8acff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorTrigger: {fileID: 6982391118866981464}
+  cakeTrigger: {fileID: 6982391118866981464}
+  iceCreamTrigger: {fileID: 6102012324263877544}
   doorHeight: 5.05
 --- !u!114 &781326972
 MonoBehaviour:
@@ -244,6 +245,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CakeTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 4765028959961362620, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765028959961362620, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765028959961362620, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1011271891
+      objectReference: {fileID: 0}
     - target: {fileID: 4765028959961362623, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
       propertyPath: doorBody
       value: 
@@ -287,6 +300,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6982391117295520884}
     m_Modifications:
+    - target: {fileID: 9212201835067588768, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212201835067588768, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212201835067588768, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1011271891
+      objectReference: {fileID: 0}
     - target: {fileID: 9212201835067588771, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}
       propertyPath: doorBody
       value: 
@@ -341,6 +366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}
+--- !u!1 &6102012324263877544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9212201835067588783, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}
+  m_PrefabInstance: {fileID: 3131940333310057223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6102012324263877545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9212201835067588782, guid: bb0c22e7aa7b1354c9c7f57d497f8976, type: 3}

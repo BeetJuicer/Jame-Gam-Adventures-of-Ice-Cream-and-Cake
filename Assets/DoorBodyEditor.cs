@@ -10,7 +10,9 @@ public class DoorBodyEditor : MonoBehaviour
     private BoxCollider2D boxCollider;
     //----GameObjects
     [SerializeField]
-    private GameObject doorTrigger;
+    private GameObject cakeTrigger;
+    [SerializeField]
+    private GameObject iceCreamTrigger;
     //----Floats
     public float doorHeight;
     private float doorWidth = 0.8125f;
@@ -34,7 +36,14 @@ public class DoorBodyEditor : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, doorTrigger.transform.position);
+        if (cakeTrigger.activeInHierarchy)
+        {
+            Gizmos.DrawLine(transform.position, cakeTrigger.transform.position);
+        }
+        if (iceCreamTrigger.activeInHierarchy)
+        {
+            Gizmos.DrawLine(transform.position, iceCreamTrigger.transform.position);
+        }
     }
 
     
