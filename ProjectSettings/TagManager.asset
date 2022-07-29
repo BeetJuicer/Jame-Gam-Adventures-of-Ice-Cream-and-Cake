@@ -7,6 +7,7 @@ TagManager:
   - AudioManager
   - Bounds
   - Projectile
+  - Cube
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - IceCreamGround
   - IceCreamPlayer
   - CakePlayer
-  - 
+  - Cube
   - 
   - 
   - 

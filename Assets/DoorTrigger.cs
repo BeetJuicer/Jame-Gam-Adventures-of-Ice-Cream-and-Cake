@@ -33,9 +33,10 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Cube"))
         {
-            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake ||
+            if (collision.CompareTag("Cube") || 
+                cakeTrigger && collision.GetComponent<PlayerHandler>().cake ||
                 !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
             {
                 startTime = Time.time;
@@ -46,15 +47,19 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !clicked)
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Cube"))
         {
-            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake ||
-                !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
+            if (!clicked)
             {
-                if (Time.time > startTime + 0.25f)
+                if (collision.CompareTag("Cube") ||
+                    cakeTrigger && collision.GetComponent<PlayerHandler>().cake ||
+                    !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
                 {
-                    StepOn();
-                    clicked = true;
+                    if (Time.time > startTime + 0.25f)
+                    {
+                        StepOn();
+                        clicked = true;
+                    }
                 }
             }
         }
@@ -64,10 +69,14 @@ public class DoorTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && clicked)
         {
-            if (cakeTrigger && collision.GetComponent<PlayerHandler>().cake || 
-                !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
+            if (clicked)
             {
-                StepOff();
+                if (collision.CompareTag("Cube") ||
+                    cakeTrigger && collision.GetComponent<PlayerHandler>().cake || 
+                    !cakeTrigger && !collision.GetComponent<PlayerHandler>().cake)
+                {
+                    StepOff();
+                }
             }
         }
     }

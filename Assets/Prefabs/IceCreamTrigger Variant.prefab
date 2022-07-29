@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765028959961362610, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4765028959961362610, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4765028959961362610, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765028959961362611, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
       propertyPath: m_Name
-      value: IceCreamTrigger
+      value: IceCreamTrigger Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4765028959961362620, guid: 7a7e7c7831836ee4cac56849cd5ea7bd, type: 3}
       propertyPath: m_Sprite

@@ -12,7 +12,7 @@ public class DoorBody : MonoBehaviour
     private DoorBodyEditor doorBodyEditor;
     //-----------Bools
     public bool verticalDoor;
-    public bool isGoingRight;
+    public bool upOrRight;
     //-----------Vectors
     private Vector2 origPos;
     //-----------Values
@@ -27,7 +27,7 @@ public class DoorBody : MonoBehaviour
         door = gameObject.transform.parent.GetComponent<Door>();
         doorBodyEditor = gameObject.GetComponent<DoorBodyEditor>();
 
-        if(isGoingRight)
+        if(upOrRight)
         direction = 1;
         else direction = -1;
 
@@ -43,7 +43,8 @@ public class DoorBody : MonoBehaviour
     {
         if (verticalDoor)
         {
-            transform.DOMoveY(origPos.y - doorBodyEditor.doorHeight * transform.rotation.y, 1.5f).SetEase(Ease.InOutSine);
+            transform.DOMoveY(origPos.y + doorBodyEditor.doorHeight * direction, 0.5f).SetEase(Ease.InOutSine);
+            Debug.Log("Vertical Open");
         }
         else
         {
