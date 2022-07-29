@@ -105,7 +105,7 @@ public class PlayerScript : MonoBehaviour
         MovementCollider = GetComponent<BoxCollider2D>();
 
         AudioManager = GameObject.FindWithTag("AudioManager").gameObject.GetComponent<AudioManager>();
-        playerHandler = GameObject.FindWithTag("Player").gameObject.GetComponent<PlayerHandler>();
+        playerHandler = GetComponent<PlayerHandler>();
 
         candyLayer = (playerHandler.cake) ? playerData.whatIsCakeGround : playerData.whatIsIceCreamGround;
 
@@ -361,6 +361,7 @@ public class PlayerScript : MonoBehaviour
 
     private void UpdateLog()
     {
+        Debug.Log(candyLayer);
         // Debug.Log(StateMachine.CurrentState);
         // Debug.Log("Stamina: " + playerData.currentStamina);
         // Debug.Log("Is ledge high enough?: " + CheckLedgeHeight());
