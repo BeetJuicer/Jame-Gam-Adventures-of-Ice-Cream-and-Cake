@@ -122,7 +122,6 @@ public class PlayerScript : MonoBehaviour
         if (PlayerInputHandler.GetInstance().GetInteractPressed())
         {
                 GameManager.isCake = !GameManager.isCake;
-
         }
 
         if (gameObject.GetComponent<PlayerHandler>().cake == false)

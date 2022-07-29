@@ -921,15 +921,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982391117985352486, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7077236
       objectReference: {fileID: 0}
     - target: {fileID: 6982391117985352486, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: -0.7064895
       objectReference: {fileID: 0}
     - target: {fileID: 6982391117985352486, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: -89.9
       objectReference: {fileID: 0}
     - target: {fileID: 6982391118866981465, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1496,7 +1496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6102012324263877545, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.07
+      value: 8.78
       objectReference: {fileID: 0}
     - target: {fileID: 6102012324263877545, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1508,11 +1508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982391117295520884, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.12
+      value: 74.08998
       objectReference: {fileID: 0}
     - target: {fileID: 6982391117295520884, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.73
+      value: 28.710943
       objectReference: {fileID: 0}
     - target: {fileID: 6982391117295520884, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4515,18 +4515,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5472230673933743519, guid: dc9b4596dca4e1d49bfef707215288d8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.779948
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472230673933743519, guid: dc9b4596dca4e1d49bfef707215288d8, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4229263
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472230673933743519, guid: dc9b4596dca4e1d49bfef707215288d8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9056604
-      objectReference: {fileID: 0}
     - target: {fileID: 5472230674008998288, guid: dc9b4596dca4e1d49bfef707215288d8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5146,12 +5134,12 @@ GameObject:
   - component: {fileID: 1316107697}
   - component: {fileID: 1316107696}
   m_Layer: 5
-  m_Name: Esc controls
+  m_Name: Esc conols
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1316107695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5167,11 +5155,11 @@ RectTransform:
   m_Father: {fileID: 42785324}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -42.549988, y: 0.30999756}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -11, y: -2.5999756}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1316107696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5192,9 +5180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Esc for controls.
-
-    R to reset.'
+  m_text: Esc for instructions.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b65c99348f068b49bef5db0bb76a6e4, type: 2}
   m_sharedMaterial: {fileID: 21809785584020342, guid: 0b65c99348f068b49bef5db0bb76a6e4, type: 2}
@@ -5203,8 +5189,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 0
   m_fontColorGradient:
@@ -7058,7 +7044,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 2.8125
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

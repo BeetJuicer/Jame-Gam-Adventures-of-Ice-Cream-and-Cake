@@ -4,14 +4,12 @@ using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class PlayerHandler : MonoBehaviour, IDataPersistence
+public class PlayerHandler : MonoBehaviour
 {
     //public float maxTime = 15;//change back to 20
     //[SerializeField]private float timeLeft;
     private float startTime;
     private float originalIntensity;
-
-    public int checkPointCount;
 
     private bool animationFinished;
     private bool isGameOverMenuActive;
@@ -36,19 +34,6 @@ public class PlayerHandler : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject deathChunkParticle;
     [SerializeField] private GameObject deathBloodParticle;
 
-    [SerializeField] private Vector2[] respawnPoints = new Vector2[3];
-
-
-    public void LoadData(GameData data)
-    {
-        this.checkPointCount = data.checkpointCount;
-    }
-
-    public void SaveData(GameData data)
-    {
-        data.checkpointCount = this.checkPointCount;
-    }
-
     void Start()
     {
         //--TODO: Change time to HP.
@@ -68,8 +53,6 @@ public class PlayerHandler : MonoBehaviour, IDataPersistence
         Invoke("ActivateTime", 0.75f);
 
         playerData.defaultFixedDeltaTime = Time.fixedDeltaTime;
-        //-- Spawn player to checkpoint.
-    //    gameObject.transform.position = respawnPoints[checkPointCount];
         //-- Set HP for player.
     //    timeLeft = maxTime;
     //    timeBar.SetMaxTime(maxTime);

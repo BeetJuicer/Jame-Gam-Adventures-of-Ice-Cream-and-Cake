@@ -4,38 +4,62 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IDataPersistence
 {
+    //Gameobjects
     [SerializeField]
-    private GameObject player;
-
+    private GameObject playerCake;
     [SerializeField]
-    private float respawnTime;
-    
+    private GameObject playerIceCream;
     [SerializeField]
     private GameObject cam;
-
-    [SerializeField]
-    private RectTransform fader;
-
     [SerializeField]
     private GameObject gameOverMenu;
 
-    private PlayerHandler playerHandler;
+    [SerializeField]
+    private RectTransform fader;
+    //----Respawn Values---
+    [SerializeField]
+    private float respawnTime;
 
-    private float respawnTimeStart;
+    [SerializeField] 
+    private Vector2[] respawnPoints = new Vector2[3];
 
+    public int checkPointCount;
+    //----Bools-----
     private bool respawn;
     public static bool isCake = false;
 
+    private static GameManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public static GameManager GetInstance()
+    {
+        return instance;
+    } 
+
+    public void LoadData(GameData data)
+    {
+        this.checkPointCount = data.checkpointCount;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.checkpointCount = this.checkPointCount;
+    }
+
     private void Start()
     {
-        playerHandler = player.GetComponent<PlayerHandler>();
+        playerCake.transform.position = respawnPoints[checkPointCount];
+        playerIceCream.transform.position = respawnPoints[checkPointCount];
 
         //Inward
         fader.gameObject.SetActive(true);
         AudioManager.instance.Play("Open");
-     //   Invoke("ActivateCamera", 0.2f);
         LeanTween.scale(fader, new Vector3(1, 1, 1), 0);
         LeanTween.scale(fader, Vector3.zero, 0.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
             fader.gameObject.SetActive(false);
@@ -50,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        /* for cake remove
         if (playerHandler.isDead && gameOverMenu.activeSelf)
         {
             if (PlayerInputHandler.GetInstance().SubmitInput)
@@ -57,6 +82,11 @@ public class GameManager : MonoBehaviour
                 Respawn();
                 gameOverMenu.SetActive(false);
             }
+        }*/
+
+        if (PlayerInputHandler.GetInstance().GetFirePressed())
+        {
+            Respawn();
         }
     }
 
@@ -75,8 +105,8 @@ public class GameManager : MonoBehaviour
 
     private void LoadScene()
     {
-       // cam.SetActive(false);
-        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
         PauseMenu.gamePaused = false;
     }
 }
