@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 6982391117985352484}
   - component: {fileID: 6982391117985352487}
   - component: {fileID: 781326972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff40fcaf56434454b849a5351ab58819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorBodyOpened: 0
   verticalDoor: 1
+  isGoingRight: 0
   activeButtons: 0
 --- !u!1001 &2505874057415267051
 PrefabInstance:
