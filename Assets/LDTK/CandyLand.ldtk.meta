@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7864e5717029c1c4d949ff099ca9316f
+guid: b3d9f32e255d8124aaae7873c31358e1
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,14 +8,14 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
-  _jsonFile: {fileID: -164016180542632921, guid: 7864e5717029c1c4d949ff099ca9316f, type: 3}
+  _jsonFile: {fileID: -164016180542632921, guid: b3d9f32e255d8124aaae7873c31358e1, type: 3}
   _pixelsPerUnit: 16
   _atlas: {fileID: 4343727234628468602, guid: c20b6db71a300024ab2f984e5c224203, type: 2}
   _customLevelPrefab: {instanceID: 0}
   _deparentInRuntime: 0
   _intGridValueColorsVisible: 0
   _useCompositeCollider: 1
-  _createBackgroundColor: 0
+  _createBackgroundColor: 1
   _intGridValues:
   - _key: IceCream_Additional_1
     _asset: {instanceID: 0}
