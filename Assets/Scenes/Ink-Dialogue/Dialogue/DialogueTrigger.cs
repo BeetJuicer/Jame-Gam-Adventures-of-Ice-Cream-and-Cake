@@ -28,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             visualCue.SetActive(true);
 
-            if (InputHandler.InteractInput) 
+            if (InputHandler.DashInput) 
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
