@@ -34,6 +34,7 @@ public class CheckpointCounter : MonoBehaviour
                 cakePassed = false;
                 iceCreamPassed = false;
                 animator.Play("Checkpoint-2");
+                AudioManager.instance.Play("coin");
             }
         }
     }
@@ -48,11 +49,13 @@ public class CheckpointCounter : MonoBehaviour
                 {
                     cakePassed = true;
                     animator.Play("Checkpoint-1-cake");
+                    AudioManager.instance.Play("coin");
                 }
                 if (!collision.GetComponent<PlayerHandler>().cake && !iceCreamPassed)
                 {
                     iceCreamPassed = true;
                     animator.Play("Checkpoint-1-iceCream");
+                    AudioManager.instance.Play("coin");
                 }
             }
         }

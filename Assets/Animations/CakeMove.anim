@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Move
+  m_Name: CakeMove
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 912100612, guid: c39e116b9b837f7409301cecfe76f099, type: 3}
+      value: {fileID: 1748385946, guid: 8254db5daa6fbbb49babd6c930921158, type: 3}
     - time: 0.0625
-      value: {fileID: 1909672283, guid: c39e116b9b837f7409301cecfe76f099, type: 3}
+      value: {fileID: 216737956, guid: 8254db5daa6fbbb49babd6c930921158, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 912100612, guid: c39e116b9b837f7409301cecfe76f099, type: 3}
-    - {fileID: 1909672283, guid: c39e116b9b837f7409301cecfe76f099, type: 3}
+    - {fileID: 1748385946, guid: 8254db5daa6fbbb49babd6c930921158, type: 3}
+    - {fileID: 216737956, guid: 8254db5daa6fbbb49babd6c930921158, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
