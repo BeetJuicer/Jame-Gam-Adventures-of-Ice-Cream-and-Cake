@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+        SetPlayerPosition();
         //Inward
         fader.gameObject.SetActive(true);
         AudioManager.instance.Play("Open");
@@ -61,7 +62,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
         LeanTween.scale(fader, Vector3.zero, 0.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
             fader.gameObject.SetActive(false);
         });
-
     }
 
     void ActivateCamera()
@@ -95,20 +95,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
         AudioManager.instance.Play("Close");
         LeanTween.scale(fader, Vector3.zero, 0);
         LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
-            Invoke("ResetPlayerPosition", 0.3f);//LoadScene previously.
+            Invoke("LoadScene", 0.3f);//LoadScene previously.
         });
         respawn = false;
     }
 
-    private void ResetPlayerPosition()
+    private void SetPlayerPosition()
     {
-        AudioManager.instance.Play("Open");
         playerCake.transform.position = respawnPoints[checkPointCount];
         playerIceCream.transform.position = respawnPoints[checkPointCount];
-        LeanTween.scale(fader, Vector3.zero, 0.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
-            fader.gameObject.SetActive(false);
-        });
-        PauseMenu.gamePaused = false;
     }
 
     private void LoadScene()

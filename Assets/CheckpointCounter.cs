@@ -8,38 +8,52 @@ public class CheckpointCounter : MonoBehaviour
     bool iceCreamPassed;
 
     private Animator animator;
+    [SerializeField] private int pointNumber;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animator.Play("Checkpoint-0");
+        if (pointNumber <= GameManager.GetInstance().checkPointCount)
+        {
+            animator.Play("Checkpoint-2");
+        }
+        else
+        {
+            animator.Play("Checkpoint-0");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cakePassed && iceCreamPassed)
+        if (pointNumber > GameManager.GetInstance().checkPointCount)
         {
-            GameManager.GetInstance().checkPointCount++;
-            cakePassed = false;
-            iceCreamPassed = false;
-            animator.Play("Checkpoint-2");
+            if (cakePassed && iceCreamPassed)
+            {
+                GameManager.GetInstance().checkPointCount++;
+                cakePassed = false;
+                iceCreamPassed = false;
+                animator.Play("Checkpoint-2");
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if(pointNumber > GameManager.GetInstance().checkPointCount)
         {
-            if (collision.GetComponent<PlayerHandler>().cake && !cakePassed)
+            if (collision.CompareTag("Player"))
             {
-                cakePassed = true;
-                animator.Play("Checkpoint-1-cake");
-            }
-            if (!collision.GetComponent<PlayerHandler>().cake && !iceCreamPassed)
-            {
-                iceCreamPassed = true;
-                animator.Play("Checkpoint-1-iceCream");
+                if (collision.GetComponent<PlayerHandler>().cake && !cakePassed)
+                {
+                    cakePassed = true;
+                    animator.Play("Checkpoint-1-cake");
+                }
+                if (!collision.GetComponent<PlayerHandler>().cake && !iceCreamPassed)
+                {
+                    iceCreamPassed = true;
+                    animator.Play("Checkpoint-1-iceCream");
+                }
             }
         }
     }

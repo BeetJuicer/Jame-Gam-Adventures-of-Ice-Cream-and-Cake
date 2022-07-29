@@ -50,7 +50,7 @@ public class PlayerHandler : MonoBehaviour
         anim.SetBool("dead", false);
         scoreText.SetActive(false);
         //--Set damageable 0.75 seconds after starting.
-        Invoke("ActivateTime", 0.75f);
+        //Invoke("ActivateTime", 0.75f);
 
         playerData.defaultFixedDeltaTime = Time.fixedDeltaTime;
         //-- Set HP for player.

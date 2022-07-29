@@ -360,7 +360,6 @@ public class PlayerScript : MonoBehaviour
 
     private void UpdateLog()
     {
-        Debug.Log(candyLayer);
         // Debug.Log(StateMachine.CurrentState);
         // Debug.Log("Stamina: " + playerData.currentStamina);
         // Debug.Log("Is ledge high enough?: " + CheckLedgeHeight());

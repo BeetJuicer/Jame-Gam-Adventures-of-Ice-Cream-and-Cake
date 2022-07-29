@@ -5067,6 +5067,76 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5472230673933743505, guid: dc9b4596dca4e1d49bfef707215288d8, type: 3}
   m_PrefabInstance: {fileID: 1149219601}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1162653909
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1414148879}
+    m_Modifications:
+    - target: {fileID: 6091538422392414412, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_Name
+      value: Data Persistence Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414514, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: fileName
+      value: candyLand.save
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414514, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: initializeDataIfNull
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -164.02724
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.142006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.200881
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+--- !u!4 &1162653910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6091538422392414515, guid: 166f6a0c2c2e6354a81aca522c324538, type: 3}
+  m_PrefabInstance: {fileID: 1162653909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1243400388
 GameObject:
   m_ObjectHideFlags: 0
@@ -5990,6 +6060,7 @@ Transform:
   - {fileID: 801768247}
   - {fileID: 2059822818}
   - {fileID: 1353459427}
+  - {fileID: 1162653910}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7136,7 +7207,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 11.25
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -7160,7 +7231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899576397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.63, y: 17.2, z: -10}
+  m_LocalPosition: {x: 20.4, y: 16.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

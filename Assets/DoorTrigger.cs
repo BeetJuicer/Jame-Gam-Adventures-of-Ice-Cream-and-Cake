@@ -28,7 +28,6 @@ public class DoorTrigger : MonoBehaviour
     void Update()
     {
         animator.SetBool("cake", cakeTrigger);
-        Debug.Log("Active buttons: " + doorBody.activeButtons);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

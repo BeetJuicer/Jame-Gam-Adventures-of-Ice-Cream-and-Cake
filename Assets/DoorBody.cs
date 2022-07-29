@@ -44,7 +44,6 @@ public class DoorBody : MonoBehaviour
         if (verticalDoor)
         {
             transform.DOMoveY(origPos.y + doorBodyEditor.doorHeight * direction, 0.5f).SetEase(Ease.InOutSine);
-            Debug.Log("Vertical Open");
         }
         else
         {
