@@ -2961,6 +2961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673881967}
   - component: {fileID: 673881966}
+  - component: {fileID: 673881968}
   m_Layer: 0
   m_Name: cute_apple_run_0
   m_TagString: Untagged
@@ -3028,13 +3029,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673881965}
   m_LocalRotation: {x: 0, y: 0, z: -0.02303632, w: 0.99973464}
-  m_LocalPosition: {x: -64.3, y: -11.1, z: -18.5}
+  m_LocalPosition: {x: -64.3, y: -7.2, z: -18.5}
   m_LocalScale: {x: 10.55, y: 10.55, z: 10.55}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 27836644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.64}
+--- !u!114 &673881968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673881965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b969431706c31b48a6ba0a973104ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &677548021
 GameObject:
   m_ObjectHideFlags: 0
@@ -7118,6 +7131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1538622644}
   - component: {fileID: 1538622643}
+  - component: {fileID: 1538622645}
   m_Layer: 0
   m_Name: ice_cream_0
   m_TagString: Untagged
@@ -7163,9 +7177,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1504995593
+  m_SortingLayer: 4
+  m_SortingOrder: 15
   m_Sprite: {fileID: 912100612, guid: c39e116b9b837f7409301cecfe76f099, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7185,13 +7199,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538622642}
   m_LocalRotation: {x: -0, y: -0, z: 0.04019467, w: 0.9991919}
-  m_LocalPosition: {x: -10.56, y: -8.326271, z: -18.5}
+  m_LocalPosition: {x: -10.56, y: -4.4262695, z: -18.5}
   m_LocalScale: {x: 10.55, y: 10.55, z: 10.55}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 27836644}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.607}
+--- !u!114 &1538622645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538622642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b969431706c31b48a6ba0a973104ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1541614406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 352735787465943944, guid: 0a68be1bd13d8694e8d8fe85574ac075, type: 3}
