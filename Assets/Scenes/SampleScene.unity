@@ -859,6 +859,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 140904239}
     m_Modifications:
     - target: {fileID: 781326972, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
+      propertyPath: upOrRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 781326972, guid: 556857d648e2707449f8ce48ceccc08e, type: 3}
       propertyPath: isGoingRight
       value: 0
       objectReference: {fileID: 0}
@@ -7737,15 +7741,15 @@ Camera:
   m_FocalLength: 20.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.09010417
     y: 0
-    width: 1
-    height: 1
+    width: 0.33240741
+    height: 0.33240741
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 2.8125
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
